@@ -24,7 +24,7 @@ const htmlPlugins = generateHtmlPlugins('./src/html/views');
 
 module.exports = {
   entry: [
-    './src/js/index.js', './src/scss/style.scss',
+    './src/js/index.js', './src/css/style.css',
   ],
   output: {
     filename: './js/bundle.js',
@@ -48,8 +48,8 @@ module.exports = {
         ],
       },
       {
-        test: /\.(sass|scss)$/,
-        include: path.resolve(__dirname, 'src/scss'),
+        test: /\.(css)$/,
+        include: path.resolve(__dirname, 'src/css'),
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
@@ -60,31 +60,6 @@ module.exports = {
             options: {
               sourceMap: true,
               url: false,
-            },
-          },
-          {
-            loader: 'postcss-loader',
-            options: {
-              ident: 'postcss',
-              sourceMap: true,
-              plugins: () => [
-                cssnano({
-                  preset: [
-                    'default',
-                    {
-                      discardComments: {
-                        removeAll: true,
-                      },
-                    },
-                  ],
-                }),
-              ],
-            },
-          },
-          {
-            loader: 'sass-loader',
-            options: {
-              sourceMap: true,
             },
           },
         ],

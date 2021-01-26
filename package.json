@@ -1,7 +1,7 @@
 {
-  "name": "pegasus",
+  "name": "xkcd-interface-studio15",
   "version": "1.0.0",
-  "description": "Сайт группы лакшери сервисов \"Pegasus\"",
+  "description": "Новый интерфейс xkcd",
   "private": true,
   "scripts": {
     "dev": "webpack --mode development",
@@ -27,11 +27,7 @@
     "eslint-plugin-import": "^2.21.2",
     "html-webpack-plugin": "^4.3.0",
     "mini-css-extract-plugin": "^0.9.0",
-    "node-sass": "^4.14.1",
-    "postcss-loader": "^3.0.0",
     "raw-loader": "^4.0.1",
-    "sass": "^1.26.9",
-    "sass-loader": "^8.0.2",
     "stylelint": "^13.6.1",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-webpack-plugin": "^2.1.0",
@@ -40,11 +36,6 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "bootstrap": "^4.5.0",
-    "cssnano": "^4.1.10",
-    "jquery": "^3.5.1",
-    "lodash": "^4.17.15",
-    "popper.js": "^1.16.1",
-    "stylelint-scss": "^3.18.0"
+    "cssnano": "^4.1.10"
   }
 }
