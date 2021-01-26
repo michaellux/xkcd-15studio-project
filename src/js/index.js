@@ -1,1 +1,3 @@
-/* Здесь будет код */
+import getLastComicsItem from './loadData';
+
+getLastComicsItem();
