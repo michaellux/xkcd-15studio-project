@@ -1,1 +1,2 @@
-/* Здесь будут стили */
+@import "./header.css";
+@import "./ui.css"
