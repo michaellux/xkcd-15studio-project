@@ -10,13 +10,27 @@
   border: 1px dotted aqua;
 }
 
+[class^="ui__"] {
+  position: relative;
+}
+
+.ui * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  font-size: 2rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+
 .ui__prev {
   grid-area: prev;
+  cursor: url("../src/img/long-arrow-left-icon-arrow-png-icon.png") 2 2, auto;
 }
 
 .ui__comicsitem {
   grid-area: comicsitem;
-  margin: auto;
+  background-color: rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
@@ -26,16 +40,20 @@
 
 .ui__next {
   grid-area: next;
+  cursor: url("../src/img/long-arrow-right-icon-arrow-png-icon.png") 2 2, auto;
 }
 
 .ui__first {
   grid-area: first;
+  cursor: url("../src/img/one.png") 2 2, auto;
 }
 
 .ui__random {
   grid-area: random;
+  cursor: url("../src/img/question-sign.png") 2 2, auto;
 }
 
 .ui__last {
   grid-area: last;
+  cursor: url("../src/img/last.png") 2 2, auto;
 }
