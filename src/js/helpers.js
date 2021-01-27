@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 /* eslint-disable no-undef */
 function formatDate(date) {
   let dd = date.getDate();
@@ -19,4 +20,10 @@ function encodeHTMLEntities(text) {
   return textArea.innerHTML;
 }
 
-export { formatDate, encodeHTMLEntities };
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
+export { formatDate, encodeHTMLEntities, getRandomInt };
