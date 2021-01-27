@@ -1,9 +1,9 @@
 /* eslint-disable no-undef */
 import 'regenerator-runtime/runtime';
 
-const loadLastComicsItem = async () => {
+const loadComicsItem = async (number = '') => {
   const corsURL = 'https://cors-anywhere.herokuapp.com/';
-  const url = 'https://xkcd.com/614/info.0.json';
+  const url = `https://xkcd.com/${number}/info.0.json`;
   const response = await fetch(corsURL + url);
   let json = null;
   if (response.ok) {
@@ -15,4 +15,4 @@ const loadLastComicsItem = async () => {
   return json;
 };
 
-export default loadLastComicsItem;
+export default loadComicsItem;

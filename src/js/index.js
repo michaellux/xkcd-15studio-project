@@ -1,9 +1,10 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-underscore-dangle */
 /* eslint-disable no-unused-vars */
-import loadLastComicsItem from './loadData';
+import loadComicsItem from './loadData';
 import createNewState from './setState';
 import insertData from './insertData';
+import addListeners from './listeners';
 
 let appState = {
   _title: null,
@@ -30,12 +31,36 @@ let appState = {
     this._currentSlideUrl = value;
   },
 
-  _numberOfLastSlide: null,
-  get numberOfLastSlide() {
-    return this._numberOfLastSlide;
+  _current: null,
+  get current() {
+    return this._current;
   },
-  set numberOfLastSlide(value) {
-    this._numberOfLastSlide = value;
+  set current(value) {
+    this._current = value;
+  },
+
+  _next: null,
+  get next() {
+    return this._next;
+  },
+  set next(value) {
+    this._next = value;
+  },
+
+  _prev: null,
+  get prev() {
+    return this._prev;
+  },
+  set prev(value) {
+    this._prev = value;
+  },
+
+  _last: null,
+  get last() {
+    return this._last;
+  },
+  set last(value) {
+    this._last = value;
   },
 
   _date: null,
@@ -47,6 +72,10 @@ let appState = {
   },
 };
 
-loadLastComicsItem()
-  .then((data) => createNewState(data))
-  .then((data) => { appState = data; insertData(appState); });
+loadComicsItem()
+  .then((data) => createNewState(data, appState, true))
+  .then((data) => {
+    appState = data;
+    insertData(appState);
+    addListeners(appState);
+  });

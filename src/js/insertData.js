@@ -2,22 +2,21 @@
 import { formatDate, encodeHTMLEntities } from './helpers';
 
 const insertData = (state) => {
-  const placeForComics = document.querySelector('.ui__comicsitem');
+  const placeForComics = document.querySelector('.comicsitem__content');
   const img = document.createElement('img');
   img.setAttribute('src', state.currentSlideUrl);
   img.setAttribute('class', 'ui__comicsItemImage');
+  img.setAttribute('class', 'comicsitem__content');
   const transcript = document.createElement('p');
   transcript.setAttribute('class', 'ui__comicsItemTranscript');
   transcript.innerHTML = encodeHTMLEntities(state.transcript);
-  placeForComics.append(img, transcript);
+  placeForComics.replaceWith(img);
 
   const headerTitle = document.querySelector('.header__title');
   headerTitle.textContent = state.title;
-  const header = document.querySelector('.header');
-  const placeforDate = document.createElement('span');
-  placeforDate.setAttribute('class', 'header__date');
+
+  const placeforDate = document.querySelector('.header__date');
   placeforDate.textContent = formatDate(state.date);
-  header.append(placeforDate);
 };
 
 export default insertData;
