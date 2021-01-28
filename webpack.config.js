@@ -76,5 +76,13 @@ module.exports = {
       filename: './css/style.bundle.css',
     }),
     new StylelintPlugin(),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: './src/img',
+          to: './img',
+        },
+      ],
+    }),
   ].concat(htmlPlugins),
 };
