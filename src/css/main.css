@@ -6,16 +6,10 @@ body {
 }
 
 .header {
+  justify-content: center;
+  display: flex;
   flex: 0 0 auto;
   position: relative;
-}
-
-.header__title {
-  font-family: sans-serif;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 2rem;
-  color: black;
 }
 
 .header__date {
