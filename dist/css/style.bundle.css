@@ -1,0 +1,127 @@
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.header {
+  justify-content: center;
+  display: flex;
+  flex: 0 0 auto;
+  position: relative;
+}
+
+.header__date {
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0.5;
+}
+
+.main {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex: 0 0 auto;
+}
+
+.ui {
+  display: grid;
+  grid-template-areas:
+    "prev title next"
+    "prev comicsitem next"
+    "optional optional optional";
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 6rem 4fr 20vh;
+  width: 100%;
+  height: 100%;
+}
+
+[class^="ui__"] {
+  position: relative;
+}
+
+.ui * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  font-size: 2rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.ui__title {
+  grid-area: title;
+  font-family: sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: black;
+}
+
+.ui__prev {
+  grid-area: prev;
+  cursor: url("../img/long-arrow-left-icon-arrow-png-icon.png") 2 2, auto;
+  min-width: 25vw;
+}
+
+.ui__comicsitem {
+  grid-area: comicsitem;
+  background-color: rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 2rem;
+}
+
+.ui__comicsItemTranscript {
+  text-align: left;
+}
+
+.ui__next {
+  grid-area: next;
+  cursor: url("../img/long-arrow-right-icon-arrow-png-icon.png") 2 2, auto;
+  min-width: 25vw;
+}
+
+.ui__optional {
+  grid-area: optional;
+  display: grid;
+  grid-template-areas: "first random last";
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 10vh;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.ui__first {
+  grid-area: first;
+  cursor: url("../img/one.png") 2 2, auto;
+}
+
+.ui__random {
+  grid-area: random;
+  cursor: url("../img/question-sign.png") 2 2, auto;
+}
+
+.ui__last {
+  grid-area: last;
+  cursor: url("../img/last.png") 2 2, auto;
+}
+
+.prev__text,
+.next__text {
+  position: fixed;
+  top: 10vh;
+}
+
+.comicsitem__content {
+  flex-direction: column;
+}
+
+
+
+
+/*# sourceMappingURL=style.bundle.css.map*/
