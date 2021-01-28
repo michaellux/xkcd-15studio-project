@@ -32,6 +32,19 @@
   color: black;
 }
 
+[class^="ui__"] {
+  position: relative;
+}
+
+.ui * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  font-size: 2rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+
 .ui__prev {
   grid-area: prev;
   cursor: url("../img/long-arrow-left-icon-arrow-png-icon.png") 2 2, auto;
